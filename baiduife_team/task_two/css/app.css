@@ -73,13 +73,15 @@ article, section, aside {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border-right-style: ridge;
-    border-bottom-style: ridge;
+   /* border-right-style: ridge;
+    border-bottom-style: ridge;*/
+    box-shadow: 0 0 4px 2px #CFCFCF;
     background-color: #fff;
 }
 article header {
     width: 100%;
     height: 75px;
+
 }
 .author-time {
     width: 200px;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Three</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="cont" id="container">
+        <div class="cont left-bar">
+            <span class="team-logo"><img src="image/lollipop.jpg"></span>
+            <span class="team-name">Lollipop</span>
+        </div>
+        <div class="cont center-content">
+            <p><h3>The Power of Persistence</h3></p>
+            <p>
+                Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. Persistence and determination alone are omnipotent. The slogan 'Press On' has solved and always will solve the problems of the human race.
+                The conventional definition of persistence is: "Refusing to give up or let go; persevering obstinately; firm or obstinate continuance in a course of action in spite of difficulty or opposition".
+            </p>
+        </div>
+        <div class="cont right-bar">
+            <span class="indiv-logo"><img src="image/xie.png"></span>
+            <span class="indiv-logo"><img src="image/yu.png"></span>
+            <span class="indiv-logo"><img src="image/tian.png"></span>
+        </div>
+    </div>
+    <div class="bt-cont">
+        <button id="addCenter">ADD CENTER</button>
+        <button id="addRight">ADD RIGHT</button>
+    </div>
+<script type="text/javascript">
+    var center = document.getElementsByClassName('center-content')[0];
+    var right = document.getElementsByClassName('right-bar')[0];
+    var ctBt = document.getElementById('addCenter');
+    var rtBt = document.getElementById('addRight');
+
+    ctBt.addEventListener('click', function() {
+        var p = document.createElement('p');
+        p.innerHTML = 'Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. Persistence and determination alone are omnipotent. The slogan \'Press On\' has solved and always will solve the problems of the human race.' +
+                'The conventional definition of persistence is: "Refusing to give up or let go; persevering obstinately; firm or obstinate continuance in a course of action in spite of difficulty or opposition."';
+        center.appendChild(p);
+    });
+
+    rtBt.addEventListener('click', function() {
+        var sp = document.createElement('span');
+        var im = document.createElement('img');
+        sp.className = 'indiv-logo';
+        im.src = 'image/yu.png';
+        sp.appendChild(im);
+        right.appendChild(sp);
+    });
+</script>
+</body>
+</html>

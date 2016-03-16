@@ -17,7 +17,7 @@ h3 {text-align: center}
 }
 #container {
     position: absolute;
-    width: 100%;
+    margin: 20px;
     background-color: #eee;
     display: flex;
     display: -webkit-flex;

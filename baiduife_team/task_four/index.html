@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!----> <meta charset="UTF-8">
+    <title>Task Four</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="circle leftTop"></div>
+        <div class="circle rightBottom"></div>
+    </div>
+    <div class="bt-cont">
+        <span id="increase">Click Me +</span>
+        <span id="decrease">Click Me -</span>
+    </div>
+
+<script>
+    var box = document.getElementsByClassName('box')[0];
+    var increase = document.getElementById('increase');
+
+    increase.addEventListener('click', function() {
+        var h = Number(box.offsetHeight);
+        box.style.height = h + 50 +'px';
+    });
+
+    decrease.addEventListener('click', function() {
+        var h = Number(box.offsetHeight);
+        box.style.height = h - 50 +'px';
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instruction Block One</title>
+    <script src="app.js"></script>
+    <style>
+        * {margin: 0; padding: 0;}
+        .container {
+            position: relative;
+            width: 500px;
+            margin: 0 auto;
+        }
+        .container div {
+            position: relative;
+            margin: 4% 9%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <canvas id="stage" width="497px" height="497px" ></canvas>
+    <div><input type="text" id="command"><button id="execute">执行</button></div>
+</div>
+
+
+
+<script type="text/javascript">
+    var canvas = document.getElementById('stage');
+    var bt = document.getElementById('execute');
+    var game = new Game();
+
+    game.initialize(canvas);
+    game.start();
+
+    bt.addEventListener('click', function() {
+        var comm = document.getElementById('command').value;
+        game.setCommand(comm);
+    })
+</script>
+</body>
+</html>

@@ -47,12 +47,19 @@ Game.prototype.drawStage = function(ctx) {
     ctx.lineWidth = 1;
     ctx.font = "18px Arial";
     ctx.textAlign = 'center';
+    ctx.strokeStyle = '#000';
 
     // Draw the stage border
     ctx.strokeRect(46, 46, 450, 450);
 
+    // Draw numbers
+    for (var j = 1; j < 11; j += 1) {
+        ctx.strokeText(j, 22, j * 45 + 30);
+        ctx.strokeText(j, j * 45 + 24, 26);
+    }
 
     // Draw inner lines
+    ctx.strokeStyle = '#c2c2c2';
     for (var i = 2; i < 11; i += 1) {
         ctx.moveTo(46, i * 45 + 1);
         ctx.lineTo(496, i * 45 + 1);
@@ -60,11 +67,6 @@ Game.prototype.drawStage = function(ctx) {
         ctx.lineTo(i * 45 + 1, 496);
     }
 
-    // Draw numbers
-    for (var j = 1; j < 11; j += 1) {
-        ctx.strokeText(j, 22, j * 45 + 30);
-        ctx.strokeText(j, j * 45 + 24, 26);
-    }
     ctx.stroke();
 };
 

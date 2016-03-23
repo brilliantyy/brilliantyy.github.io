@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    margin: 20px auto;
+    width: 300px;
+}
+table thead th {
+    color: #fff;
+    background-color: #000;
+    text-align: left;
+}
+
+table tbody tr {
+    color: #000;
+}
+
+table tbody tr:nth-child(1),
+table tbody tr:nth-child(2),
+table tbody tr:nth-child(3) {
+    color: #f00;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #B2B2B2;
+}
+
+#input {
+    width: 150px;
+    margin:  50px auto;
+    display: block;
+    transition: width 1s ease;
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+}
+
+#input:focus {
+    width: 210px;
+}
+
+.image-slider-1 {
+    width: 700px;
+    height: 400px;
+    background-color: yellow;
+    margin: 100px auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 2100px;
+    height: 400px;
+    background-color: red;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s ease;
+    -moz-transition: left 2s ease;
+    -o-transition: left 2s ease;
+    transition: left 2s ease;
+}
+
+.image-container img {
+    width: 700px;
+    height: 400px;
+}
+
+.slider-image {
+    float: left;
+    position: relative;
+}
+
+#image-1:target ~ .image-container {
+    left: 0;
+}
+
+#image-2:target ~ .image-container {
+    left: -700px;
+}
+
+#image-3:target ~ .image-container {
+    left: -1400px;
+}
+
+.button-container {
+    position: relative;
+    top: -30px;
+    float: right;
+}
+
+.image-change {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(150,150,150,.6);
+}

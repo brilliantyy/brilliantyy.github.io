@@ -19,6 +19,9 @@ MoniQueue.prototype = {
         }
         this.addEvent();
     },
+    /**
+     * 队列重绘
+     */
     renderQueue: function() {
         var parent = document.querySelector('ul');
         var list = document.querySelectorAll('.queue li');
@@ -31,8 +34,12 @@ MoniQueue.prototype = {
             child.innerHTML = this.queueData[i];
             parent.appendChild(child);
         }
-        this.addDelEvent();
+
     },
+    /**
+     * 处理输入
+     * @returns {string}
+     */
     processInput: function() {
         var inp = document.getElementById('num').value.trim();
         var reg = new RegExp('^-?\\d+$');
@@ -49,8 +56,9 @@ MoniQueue.prototype = {
         this.renderQueue();
     },
     popLeft: function() {
-        this.queueData.shift();
+        var num = this.queueData.shift();
         this.renderQueue();
+        alert('删除数值 : ' + num);
     },
     pushRight: function() {
         var num = this.processInput();
@@ -59,14 +67,16 @@ MoniQueue.prototype = {
         this.renderQueue();
     },
     popRight: function() {
-        this.queueData.pop();
+        var num = this.queueData.pop();
         this.renderQueue();
+        alert('删除数值 : ' + num);
     },
     addEvent: function() {
         var pushLeftBtn = document.getElementById('push-left');
         var pushRightBtn = document.getElementById('push-right');
         var popLeftBtn = document.getElementById('pop-left');
         var popRightBtn = document.getElementById('pop-right');
+        var parent = document.querySelector('.queue');
         var self = this;
 
         pushLeftBtn.addEventListener('click', function() {
@@ -84,24 +94,17 @@ MoniQueue.prototype = {
         popRightBtn.addEventListener('click', function() {
             self.popRight();
         });
-    },
-    addDelEvent: function() {
-        var list = document.querySelectorAll('.queue li');
-        var self = this;
-        for (var i = 0, len = list.length; i < len; i += 1) {
-            list[i].index = i;
-            list[i].addEventListener('click', function() {
-                var sibling = this.nextSibling;
-                while (sibling) {
-                    if (sibling.nodeType == 1) {
-                        sibling.index--;
-                    }
-                    sibling = sibling.nextSibling;
-                }
 
-                self.queueData.splice(this.index, 1);
+        /**
+         * 添加事件代理
+         */
+        parent.addEventListener('click', function(e) {
+            if (e.target && e.target.nodeName.toUpperCase() == "LI") {
+                var index = Array.from(this.querySelectorAll('li')).indexOf(e.target);
+                self.queueData.splice(index, 1);
                 self.renderQueue();
-            })
-        }
+            }
+        })
+
     }
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 20</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="op-cont">
+            <textarea id="content"></textarea>
+            <div>
+                <button id="push-left">左侧入</button>
+                <button id="push-right">右侧入</button>
+                <button id="pop-left">左侧出</button>
+                <button id="pop-right">右侧出</button>
+                <button id="search">查询</button>
+                <input type="text" id="search-input" placeholder="请输入要查询的内容">
+            </div>
+        </div>
+        <ul class="queue"></ul>
+    </div>
+<script src="app.js"></script>
+<script>
+    var queue = new MoniQueue();
+</script>
+</body>
+</html>

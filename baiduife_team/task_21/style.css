@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+.outer {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #B6B6B6;
+}
+.tag-outer {
+    position: relative;
+    width: 100%;
+    height: 40%;
+}
+.hobby-outer {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+input, textarea {
+    position: relative;
+    top: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    outline: none;
+}
+input {
+    height: 25px;
+}
+input:focus { border-color: #8BE6FF; }
+label {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    height: 25px;
+    width: 50px;
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+textarea {
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+}
+textarea:focus { border-color: #FAA597; }
+.tag-box, .hobby-box {
+    width: 80%;
+    height: 150px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.tag-box span, .hobby-box span  {
+    margin: 5px;
+    padding: 3px 6px;
+    height: 25px;
+    font-size: 22px;
+    font-family: Impact;
+    display: inline-block;
+}
+.tag-box span {
+    background-color: #8BE6FF;
+}
+.hobby-box span {
+    background-color: antiquewhite;
+}
+button {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    display: block;
+    margin: 15px auto;
+    outline: none;
+    font-size: 14px;
+    letter-spacing: .1em;
+    border: 1px solid #FAA597;
+    background-color: #FAC9C0;
+}

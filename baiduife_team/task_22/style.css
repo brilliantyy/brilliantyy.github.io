@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.root {
+    position: relative;
+    margin: 100px auto 0;
+    width: 700px;
+    height: 220px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+.level-1, .level-2, .level-3 {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+.level-1 {
+    width: 320px;
+    height: 180px;
+}
+.level-2 {
+    width: 130px;
+    height: 145px;
+}
+.level-3 {
+    width: 45px;
+    height: 115px;
+}
+.btn-bar {
+    width: 700px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    width: 100px;
+    height: 21px;
+    line-height: 21px;
+}

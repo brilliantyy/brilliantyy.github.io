@@ -24,15 +24,20 @@ function Tree(node) {
  * 深度优先遍历树
  */
 Tree.prototype.traverseDF = function() {
-    var self = this;
-    self.trace = [];
-    function recurse(currentNode) {
-        for (var i = 0, len = currentNode.children.length; i < len; i++) {
-            recurse(currentNode.children[i]);
+    var stack = [],
+        curNode = null;
+    this.trace = [];
+    stack.push(this._root);
+    while(stack.length > 0) {
+        curNode = stack.pop();
+        this.trace.push(curNode);
+        if (curNode.children.length > 0) {
+            for (var i = curNode.children.length - 1; i >= 0; i--) {
+                stack.push(curNode.children[i]);
+            }
         }
-        self.trace.push(currentNode);
     }
-    recurse(self._root);
+
 };
 
 /**

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+span {height: 0;}
+.node {
+    padding: 9px;
+    margin: 0 1px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.root {
+    position: relative;
+    margin: 100px auto 0;
+    width: 1150px;
+    height: 250px;
+}
+.btn-bar {
+    position: absolute;
+    width: 800px;
+    top: 400px;
+    left: 50%;
+    margin-left: -400px;
+    display: flex;
+    justify-content: space-between;
+}
+#search-box,
+#insert-box {
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+}
+button {
+    height: 25px;
+    padding: 0 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+}
+button:active { background-color: #20B4FF;}

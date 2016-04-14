@@ -112,6 +112,7 @@ Tree.prototype.insert = function(node) {
         var newDOM = document.createElement('div');
         var span = document.createElement('span');
         newDOM.className = 'node';
+        newDOM.node = node;
         node.dom = newDOM;
         span.innerHTML = node.data;
         newDOM.appendChild(span);

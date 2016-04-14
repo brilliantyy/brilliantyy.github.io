@@ -15,9 +15,9 @@ span {height: 0;}
     -moz-box-sizing: border-box;
 }
 .root {
-    position: relative;
+    position: absolute;
     margin: 100px auto 0;
-    width: 1150px;
+    width: auto;
     height: 250px;
 }
 .btn-bar {

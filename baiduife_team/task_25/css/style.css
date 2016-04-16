@@ -18,12 +18,10 @@ span {
 span i {margin-right: 5px;}
 .node {
     padding: 5px 9px;
-    /*margin: 1px 0;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background-color: #fff;
-    /*border: 1px solid #000;*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
@@ -32,7 +30,6 @@ span i {margin-right: 5px;}
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
-    /*height: 600px;*/
 }
 .btn-bar {
     position: absolute;

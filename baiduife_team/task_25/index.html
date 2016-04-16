@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 25</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+<div class="root node open" id="root">
+    <span><i class="fa fa-caret-down"></i>Root</span>
+    <div class="node open">
+        <span><i class="fa fa-caret-down"></i>Fruits</span>
+        <div class="node open">
+            <span><i class="fa fa-caret-down"></i>Apple</span>
+            <div class="node"><span>Pear</span></div>
+            <div class="node"><span>Banana</span></div>
+            <div class="node"><span>Orange</span></div>
+            <div class="node"><span>Strawberry</span></div>
+        </div>
+        <div class="node"><span>Watermelon</span></div>
+        <div class="node open">
+            <span><i class="fa fa-caret-down"></i>Litchi</span>
+            <div class="node"><span>Cherry</span></div>
+            <div class="node"><span>Grape</span></div>
+        </div>
+    </div>
+    <div class="node open">
+        <span><i class="fa fa-caret-down"></i>Food</span>
+        <div class="node open">
+            <span><i class="fa fa-caret-down"></i>Rice</span>
+            <div class="node"><span>Bread</span></div>
+            <div class="node"><span>Hamburger</span></div>
+            <div class="node"><span>Cheese</span></div>
+        </div>
+        <div class="node open">
+            <span><i class="fa fa-caret-down"></i>Meat</span>
+            <div class="node open">
+                <span><i class="fa fa-caret-down"></i>Fish</span>
+                <div class="node"><span>Beef</span></div>
+            </div>
+            <div class="node"><span>Bacon</span></div>
+        </div>
+    </div>
+    <div class="node"><span>Drink</span></div>
+</div>
+</div>
+<div class="btn-bar">
+    <button>深度优先遍历</button>
+    <button>广度优先遍历</button>
+    <div>
+        <input type="text" id="search-box">
+        <button id="search">查找</button>
+    </div>
+    <div>
+        <input type="text" id="insert-box">
+        <button id="insert">插入</button>
+    </div>
+    <button>删除</button>
+</div>
+<script src="task_25.js"></script>
+</body>
+</html>

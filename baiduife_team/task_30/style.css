@@ -1,0 +1,46 @@
+form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 410px;
+}
+form > p {
+    margin: 10px 0;
+}
+form > p label {
+    display: inline-block;
+    width: 80px;
+    line-height: 30px;
+    text-align: right;
+}
+form > p input {
+    width: 300px;
+    height: 22px;
+    float: right;
+    padding: 3px 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+form > p > span {
+    display: none;
+    height: 20px;
+}
+.tips {
+    float: right;
+    width: 310px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+button {
+    width: 70px;
+    height: 30px;
+    float: right;
+    background-color: #3CAFEF;
+    color: #fff;
+    border: 2px solid #5FA2F3;
+    border-radius: 4px;
+}

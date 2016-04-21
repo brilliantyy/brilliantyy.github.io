@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 31</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="radio-bar">
+        <div>
+            <input type="radio" name="identification" id="student" checked><label>在校生</label>
+        </div>
+        <div>
+            <input type="radio" name="identification" id="not-student"><label>非在校生</label>
+        </div>
+    </div>
+    <form id="for-student">
+        <div>
+            <label>城市</label>
+            <select id="city">
+                <option selected></option>
+                <option>北京</option>
+                <option>天津</option>
+                <option>上海</option>
+                <option>合肥</option>
+                <option>南京</option>
+                <option>广州</option>
+                <option>哈尔滨</option>
+            </select>
+            <label>学校</label>
+            <select id="schools">
+                <option value=""></option>
+            </select>
+        </div>
+    </form>
+    <form id="for-not-student">
+        <div>
+            <label>就业单位</label><input type="text">
+        </div>
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
